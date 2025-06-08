@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "db7a9b7b-441b-4e7c-93ea-17158e560520",
+		"name": "Enyata QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40226287"
+	},
+	"item": [
+		{
+			"name": "createWithList",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": 0,\r\n    \"username\": \"username1\",\r\n    \"firstName\": \"newer\",\r\n    \"lastName\": \"userer\",\r\n    \"email\": \"enyata-user1@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9900291029\",\r\n    \"userStatus\": 0\r\n},\r\n{\r\n    \"id\": 1,\r\n    \"username\": \"username2\",\r\n    \"firstName\": \"newerer\",\r\n    \"lastName\": \"usererer\",\r\n    \"email\": \"enyata-user2@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9910291029\",\r\n    \"userStatus\": 0\r\n},\r\n{\r\n    \"id\": 2,\r\n    \"username\": \"username3\",\r\n    \"firstName\": \"renewer\",\r\n    \"lastName\": \"reuserer\",\r\n    \"email\": \"enyata-user3@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9904491029\",\r\n    \"userStatus\": 0\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/createWithList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/nameclient2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"nameclient2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"username\": \"johndoe\",\r\n    \"firstName\": \"Johnny\",\r\n    \"lastName\": \"Doey\",\r\n    \"email\": \"johnnyqa@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"080222222223\",\r\n    \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/johndoe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"johndoe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/johndoe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"johndoe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"johndoey\",\r\n    \"password\": \"Password@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWithArray",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": 4,\r\n    \"username\": \"nameclient1\",\r\n    \"firstName\": \"parter\",\r\n    \"lastName\": \"clienter\",\r\n    \"email\": \"enyata-client1@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9900291029\",\r\n    \"clientStatus\": 0\r\n},\r\n{\r\n    \"id\": 5,\r\n    \"username\": \"nameclient2\",\r\n    \"firstName\": \"parterer\",\r\n    \"lastName\": \"clienterer\",\r\n    \"email\": \"enyata-client2@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9910291029\",\r\n    \"clientStatus\": 0\r\n},\r\n{\r\n    \"id\": 6,\r\n    \"username\": \"nameclient3\",\r\n    \"firstName\": \"reparter\",\r\n    \"lastName\": \"reclienter\",\r\n    \"email\": \"enyata-client3@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"9904491029\",\r\n    \"clientStatus\": 0\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/createWithArray",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"username\": \"johndoey\",\r\n    \"firstName\": \"Johnny\",\r\n    \"lastName\": \"Doey\",\r\n    \"email\": \"johnnyqa@yopmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"phone\": \"080222222223\",\r\n    \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://petstore.swagger.io/v2",
+			"type": "string"
+		}
+	]
+}
